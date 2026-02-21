@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcelo Tech | Desenvolvedor</title>
+  <meta name="description" content="Portfólio de Marcelo Pontiac - Desenvolvedor apaixonado por tecnologia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a14;
+      --surface: #12121f;
+      --accent: #7c3aed;
+      --accent2: #06b6d4;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    /* Animated gradient background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse at 20% 20%, rgba(124,58,237,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 80%, rgba(6,182,212,0.12) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      max-width: 700px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 0 40px rgba(124,58,237,0.5);
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 40px rgba(124,58,237,0.5); }
+      50%       { box-shadow: 0 0 60px rgba(6,182,212,0.6); }
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff 30%, var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .chip {
+      background: var(--surface);
+      border: 1px solid rgba(124,58,237,0.35);
+      border-radius: 2rem;
+      padding: 0.45rem 1.1rem;
+      font-size: 0.85rem;
+      color: var(--accent2);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .chip:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent2);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 1.25rem;
+      padding: 1.75rem 2rem;
+      text-align: left;
+      backdrop-filter: blur(12px);
+      transition: transform 0.25s;
+    }
+
+    .card:hover { transform: translateY(-4px); }
+
+    .card p { color: var(--muted); line-height: 1.7; font-size: 0.95rem; }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(6,182,212,0.1);
+      border: 1px solid rgba(6,182,212,0.3);
+      border-radius: 2rem;
+      padding: 0.35rem 1rem;
+      font-size: 0.8rem;
+      color: var(--accent2);
+      margin-top: 2rem;
+    }
+
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      animation: blink 1.5s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="avatar">👨‍💻</div>
+    <h1>Marcelo Tech</h1>
+    <p class="subtitle">Apaixonado por tecnologia &amp; desenvolvimento</p>
+
+    <div class="chips">
+      <span class="chip">💡 Aprendendo sempre</span>
+      <span class="chip">🤝 Aberto a colaborações</span>
+      <span class="chip">🚀 em construção</span>
+    </div>
+
+    <div class="card">
+      <p>
+        Olá! Sou o <strong style="color:#e2e8f0">Marcelo Pontiac</strong>, um desenvolvedor entusiasmado
+        com tecnologia. Este site está sendo construído — fique à vontade para acompanhar a evolução!
+        Estou sempre aprendendo e buscando novas oportunidades de colaboração.
+      </p>
+    </div>
+
+    <div class="status-badge">
+      <span class="dot"></span>
+      Site online e funcionando
+    </div>
+  </div>
+</body>
+</html>
